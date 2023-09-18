@@ -1,2 +1,2 @@
-# dsm2s-cap04-frontend
+# dsm-cap04-frontend
 Created with CodeSandbox
