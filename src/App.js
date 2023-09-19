@@ -1,11 +1,17 @@
-import ConsultaCatalogo from "./componentes/ConsultaCatalogo";
+mport Home from "./Home";
 import "./styles.css";
-
-export default function App() {
-  return (
-    <div className="App">
-      <h1>Fatec Diadema</h1>
-      <ConsultaCatalogo />
-    </div>
-  );
-}
+import "bootstrap/dist/css/bootstrap.min.css";
+import ConsultaCatalogo from "./componentes/ConsultaCatalogo";
+import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
+const App = () => {
+ return (
+ <Router>
+ <Routes>
+ <Route index element={<Home />} />
+ <Route path="/home" element={<Home />} />
+ <Route path="/produtos/catalogo" element={<ConsultaCatalogo />} />
+ </Routes>
+ </Router>
+ );
+};
+export default App;
